@@ -16,7 +16,7 @@ log = Logger()
 
 @dp.message_handler(commands=['help'])
 async def help_me(message: types.Message):
-    with open('READ_ME.txt', 'r') as file:
+    with open('README.txt', 'r', encoding='UTF-8') as file:
         read_me = file.readlines()
         for line in read_me:
             await bot.send_message(message.from_user.id, line)
